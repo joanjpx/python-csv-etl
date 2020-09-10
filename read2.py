@@ -8,23 +8,23 @@ mydb = mysql.connector.connect(
 	database="gilatssra2"
 )
 
-cursor = mydb.cursor(buffered=True)
-rs = cursor.execute('SELECT * FROM elements')
 
-count = rs.rowcount;
-
-if count>0:
-	for x in rows:
-		print x
-else:
-	print "No ResultSet"
-	
-
-
-with open('elements.csv') as File:  
+with open('elements20200910.csv') as File:  
     reader = csv.reader(File)
     for row in reader:
-	print row    	
-exit()
+    	c = mydb.cursor(buffered=True)
+    	sql = "SELECT * FROM elements WHERE identifier='"+row[3]+"'"
+    	#print sql
+    	query = c.execute(sql)
+
+    	if(hasattr(query,"fetchall")):
+    		row = query.fetchall()
+    		print sql
+    	else:
+    		continue
+    	
+
+		  	
+
 
         

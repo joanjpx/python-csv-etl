@@ -1,6 +1,4 @@
-,,,,,,,,,
-Ubigeo,Identificador del elemento,Identificador padre,Descripción,Tipo,IP,Plataforma,Solucion,Observcacion,Orden
-356,AY-0004,,NODO,2,192.168.0.1,,,NODO,1
+356,HC-0004-CO01,,NODO,2,192.168.0.1,,,NODO,1
 8,AY-0005,,NODO,2,192.168.0.1,,,NODO,1
 259,AY-0007,,NODO,2,192.168.0.1,,,NODO,1
 363,AY-0008,,NODO,2,192.168.0.1,,,NODO,1
