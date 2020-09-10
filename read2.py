@@ -8,7 +8,7 @@ mydb = mysql.connector.connect(
 	database="gilatssra2"
 )
 
-cursor = mydb.cursor()
+cursor = mydb.cursor(buffered=True)
 rs = cursor.execute('SELECT * FROM elements')
 
 count = rs.rowcount;
