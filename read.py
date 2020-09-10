@@ -2,10 +2,10 @@ import csv
 import mysql.connector
 
 mydb = mysql.connector.connect(
-  host="localhost",
+  host="debian-sys-maint",
   user="root",
-  password="",
-  database="django"
+  password="yourpassword",
+  database="mydatabase"
 )
 
 with open('elements.csv') as File:  
