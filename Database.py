@@ -19,7 +19,8 @@ class Database:
             row = self.cursor.fetchone()
             print(row[2])
         except Exception as e:
-            raise
+            print("No Resultset")
+            #raise     
     
     def updateRow(self, identifier, platform):
         sql = "SELECT * FROM elements WHERE identifier='{id}'".format(id=identifier)
@@ -29,8 +30,9 @@ class Database:
             row = self.cursor.fetchone()
             print(row[2])
         except Exception as e:
-            raise     
+            print("No Resultset")
+            #raise     
 
-database = Database()
-database.selectOne("HC-0002-CS01")
-database.selectOne("HC-0004-CO01")
+#database = Database()
+#database.selectOne("HC-0002-CS01")
+#database.selectOne("HC-0004-CO01")
