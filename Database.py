@@ -29,7 +29,7 @@ class Database:
         print(sql)
         try:
             self.cursor.execute(sql)
-            row = self.cursor.fetchone()
+            row = self.cursor.commit()
             print(row[2])
         except Exception as e:
             print("No Affected Rows")
