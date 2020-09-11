@@ -17,20 +17,22 @@ class Database:
         try:
             self.cursor.execute(sql)
             row = self.cursor.fetchone()
-            print(row[2])
+            print(row[0])
+            return row[0]
         except Exception as e:
             print("No Resultset")
+            return False
             #raise     
     
     def updateRow(self, identifier, platform):
-        sql = "SELECT * FROM elements WHERE identifier='{id}'".format(id=identifier)
+        sql = "UPDATE elements SET platforms_2='{platform}' WHERE identifier='{id}'".format(id=identifier,platform=platform)
         print(sql)
         try:
             self.cursor.execute(sql)
             row = self.cursor.fetchone()
             print(row[2])
         except Exception as e:
-            print("No Resultset")
+            print("No Affected Rows")
             #raise     
 
 #database = Database()
